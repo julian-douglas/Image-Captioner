@@ -85,12 +85,30 @@ function displayFileName() {
     fileLabel.style.backgroundImage = `url(${imageUrl})`;
     fileLabel.style.backgroundSize = 'cover';
 
+
     // Get the dimensions of the image and set the width and height of the file-label element
     const img = new Image();
     img.src = imageUrl;
     img.onload = function () {
-        fileLabel.style.width = img.width + 'px';
-        fileLabel.style.height = img.height + 'px';
+        const maxWidth = 450; // Set your maximum width here
+        const maxHeight = 400; // Set your maximum height here
+    
+        // Calculate new dimensions while maintaining aspect ratio
+        let newWidth = img.width;
+        let newHeight = img.height;
+    
+        if (newWidth > maxWidth) {
+            newWidth = maxWidth;
+            newHeight = (newWidth / img.width) * img.height;
+        }
+    
+        if (newHeight > maxHeight) {
+            newHeight = maxHeight;
+            newWidth = (newHeight / img.height) * img.width;
+        }
+    
+        fileLabel.style.width = newWidth + 'px';
+        fileLabel.style.height = newHeight + 'px';
     };
 
     document.getElementById("drag-and-drop-text").innerHTML = label;
@@ -100,8 +118,6 @@ function displayFileName() {
     previewButton.style.display = "";
     dragText.style.display = "none";
   
-    const preview = document.getElementById('preview');
-    console.log(changeText);
 
     
 
