@@ -53,7 +53,7 @@ submitButton.addEventListener('click', function () {
     handleFormSubmission();
 });
 
-var label = "Drag & Drop or Click to Choose File";
+var label = "Choose Image..";
 var fileUploaded = false;
 
 document.getElementById("drag-and-drop-text").innerHTML = label;
