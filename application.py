@@ -13,10 +13,11 @@ from jinja2 import Environment, FileSystemLoader
 template_env = Environment(loader=FileSystemLoader(""))
 upload_form = template_env.get_template("index.html")
 
+current_dir = os.getcwd()
 
 application = app = FastAPI()
 application.mount("/uploaded_images", StaticFiles(directory="uploaded_images"), name="uploaded_images")
-templates = Jinja2Templates(directory="")
+templates = Jinja2Templates(directory=current_dir)
 
 # CORS configuration
 origins = ["*"] 
