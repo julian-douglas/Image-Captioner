@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
 from fastapi.templating import Jinja2Templates
 from jinja2 import Environment, FileSystemLoader
+import os
 
 
 # Set up Jinja2 environment
