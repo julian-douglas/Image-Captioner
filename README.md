@@ -8,7 +8,7 @@ In order to run this, open a new terminal window. Then:
 - `pip install uvicorn`
 - `git clone https://github.com/julian-douglas/image-captioner.git`
 - `cd image-captioner`
-- `uvicorn main:app --reload`
+- `uvicorn application:app --reload`
 
 Then:
 - navigate to https://julian-douglas.github.io/image-captioner/
