@@ -10,6 +10,6 @@ In order to run this, open a new terminal window. Then:
 - `cd image-captioner`
 - `uvicorn application:app --reload`
 
-Then:
+Wait for the terminal to say `Application startup complete.`. Then:
 - navigate to https://julian-douglas.github.io/image-captioner/
 - upload an image and enjoy!
