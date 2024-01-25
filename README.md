@@ -6,10 +6,10 @@ This is a small project that uses FastAPI and Transformers to take in an image f
 
 In order to run this, open a new terminal window. Then:
 - `pip install uvicorn`
-- `git clone https://github.com/julian-douglas/image-captioner.git`
-- `cd image-captioner`
+- `git clone https://github.com/julian-douglas/Image-Captioner.git`
+- `cd Image-Captioner`
 - `uvicorn application:app --reload`
 
 Wait for the terminal to say `Application startup complete.`. Then:
-- navigate to https://julian-douglas.github.io/image-captioner/
+- navigate to https://julian-douglas.github.io/Image-Captioner/
 - upload an image and enjoy!
